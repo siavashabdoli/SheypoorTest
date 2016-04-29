@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sheypoor</string>
+    <string name="unknown_text">یک خطای غیر منتظره رخ داد</string>
+    <string name="title_activity_next_page">NextPageActivity</string>
+    <string name="login_successful_text">شما با موفقیت وارد شدید</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="mail_pass_wrong">نام کاربری یا کلمه عبور شما اشتباه است</string>
+    <string name="email_format_invalid">فرمت ایمیل صحیح نیست</string>
+    <string name="fill_mail_pass">اطلاعات را کامل وارد کنید</string>
+</resources>

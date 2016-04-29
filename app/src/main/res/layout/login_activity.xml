@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentView">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/login_activity_linear_top_padding"
+                android:paddingLeft="@dimen/login_activity_linear_side_padding"
+                android:paddingRight="@dimen/login_activity_linear_side_padding">
+
+                <ImageView android:src="@drawable/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/login_activity_logo_height"
+                    android:layout_marginBottom="@dimen/login_activity_logo_margin_bottom"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Email Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/login_activity_textinput_padding"
+                    android:layout_marginBottom="@dimen/login_activity_textinput_padding">
+                    <EditText android:id="@+id/login_activity_input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Password Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/login_activity_textinput_padding"
+                    android:layout_marginBottom="@dimen/login_activity_textinput_padding">
+                    <EditText android:id="@+id/login_activity_input_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Password"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/login_activity_btn_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/orangeColorButton"
+                    android:layout_marginTop="@dimen/login_activity_btn_updown_padding"
+                    android:layout_marginBottom="@dimen/login_activity_btn_updown_padding"
+                    android:padding="@dimen/login_activity_btn_side_padding"
+                    android:text="Login"/>
+
+                <TextView android:id="@+id/login_activity_error"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_activity_error_margin_bottom"
+                    android:textColor="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:textSize="@dimen/login_activity_error_size"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <include layout="@layout/loading_view"/>
+</FrameLayout>
